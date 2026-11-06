@@ -504,8 +504,8 @@ nav .nav-r .btn{padding:9px 16px;font-size:13.5px;border-radius:999px}
 .findme a:hover{border-color:var(--teal);color:var(--teal)}
 .findme a:active{scale:.94}
 /* carnet colgante */
-.lanyard{position:relative;justify-self:center;width:min(300px,34vw);perspective:1100px;transform-origin:50% -60px;animation:swing 7s ease-in-out infinite alternate;margin-top:110px}
-@keyframes swing{from{transform:rotate(-2.6deg)}to{transform:rotate(2.6deg)}}
+.lanyard{position:relative;justify-self:center;width:min(300px,34vw);perspective:1100px;transform-origin:50% -60px;animation:swing 4.6s cubic-bezier(.45,0,.55,1) infinite alternate;margin-top:110px}
+@keyframes swing{from{transform:rotate(-7deg) translateX(-4px)}to{transform:rotate(7deg) translateX(4px)}}
 .lanyard .strap{height:120px;width:34px;margin:-110px auto 0;background:repeating-linear-gradient(180deg,var(--teal) 0 14px,var(--violet) 14px 28px);border-radius:0 0 6px 6px;opacity:.9;overflow:hidden;position:relative}
 .lanyard .strap span{position:absolute;left:50%;top:0;transform:translateX(-50%) rotate(90deg);transform-origin:left top;white-space:nowrap;font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--bg);opacity:.9;margin-left:-11px;margin-top:4px}
 .lanyard .clip{width:56px;height:18px;margin:-4px auto 0;border-radius:6px;background:#2a2f44;border:1px solid #3a4160;position:relative;z-index:2}
@@ -1037,19 +1037,16 @@ if(FINE&&!RM)$$('.proj').forEach(p=>{const c=p.querySelector('.card'),g=p.queryS
   ];
   if(RM){el.innerHTML=script.map(([c,t])=>`<span class="${c}">${t}</span>`).join('\n');return;}
   let started=false;
-  new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;run();}}).observe(el);
+  new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;run();}},{rootMargin:'0px 0px 320px 0px'}).observe(el);
   async function run(){
-    while(true){
-      el.innerHTML='';
-      for(const [cls,txt] of script){
-        const s=document.createElement('span');s.className=cls;el.append(s);const caret=document.createElement('span');caret.className='caret';el.append(caret);
-        const speed=cls==='p'?24:7;
-        for(let i=0;i<=txt.length;i++){s.textContent=txt.slice(0,i);await new Promise(r=>setTimeout(r,speed));}
-        caret.remove();el.append('\n');await new Promise(r=>setTimeout(r,cls==='p'?500:cls==='dim'?700:220));
-      }
-      const caret=document.createElement('span');caret.className='caret';el.append(caret);
-      await new Promise(r=>setTimeout(r,4500));
+    el.innerHTML='';
+    for(const [cls,txt] of script){
+      const s=document.createElement('span');s.className=cls;el.append(s);const caret=document.createElement('span');caret.className='caret';el.append(caret);
+      const speed=cls==='p'?14:4;
+      for(let i=0;i<=txt.length;i++){s.textContent=txt.slice(0,i);await new Promise(r=>setTimeout(r,speed));}
+      caret.remove();el.append('\n');await new Promise(r=>setTimeout(r,cls==='p'?260:cls==='dim'?320:110));
     }
+    const caret=document.createElement('span');caret.className='caret';el.append(caret);
   }
 })();
 
