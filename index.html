@@ -625,6 +625,7 @@ footer{padding:56px 0 28px;border-top:1px solid var(--line);background:var(--bg-
       <a href="#top" class="on">Inicio</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#mipg">MIPG</a>
+      <a href="#laboratorio">Laboratorio</a>
       <a href="#proyectos">Portafolio</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -780,6 +781,34 @@ footer{padding:56px 0 28px;border-top:1px solid var(--line);background:var(--bg-
   </div>
 </section>
 
+<section id="laboratorio" style="background:var(--bg-2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head center">
+      <h2 class="rv">Laboratorio en vivo</h2>
+      <p class="rv">Nada de capturas: esto corre aquí mismo. A la izquierda, un extracto literal de las reglas que les doy a Claude Code y Codex en mi repositorio. A la derecha, un objeto 3D hecho en código que puedes girar con el dedo o el mouse.</p>
+    </div>
+    <div class="lab">
+      <div class="term rv">
+        <div class="term-bar"><i></i><i></i><i></i><span>AGENTS.md — reglas reales del repositorio</span></div>
+        <div class="term-body" id="term" aria-live="off"></div>
+      </div>
+      <div class="playground rv">
+        <div>
+          <h3>Esfera de partículas</h3>
+          <p>2.000 puntos proyectados en 3D, sin librerías. Arrastra para girarla.</p>
+        </div>
+        <canvas id="orb" aria-label="Esfera 3D interactiva"></canvas>
+        <div class="chips" role="group" aria-label="Forma">
+          <button class="chip" aria-pressed="true" data-shape="sphere">Esfera</button>
+          <button class="chip" aria-pressed="false" data-shape="torus">Toroide</button>
+          <button class="chip" aria-pressed="false" data-shape="wave">Onda</button>
+          <button class="chip" aria-pressed="false" data-shape="helix">Hélice</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="proyectos">
   <div class="wrap">
     <div class="sec-head rv"><span class="eyebrow">Portafolio</span><h2>Lo que he <span class="grad">construido</span></h2><p>Proyectos reales, los títulos que los respaldan y las herramientas con las que trabajo.</p></div>
@@ -790,28 +819,28 @@ footer{padding:56px 0 28px;border-top:1px solid var(--line);background:var(--bg-
     </div>
     <div class="panel projects" id="tab-proyectos" role="tabpanel" aria-labelledby="tabb-proyectos">
       <div class="proj rv" style="--i:0"><div class="card">
-        <div class="art"><img src="assets/preview-mipg.jpg" alt="Pantalla del Semáforo Cliente Interno con seis dependencias y su color (datos de ejemplo)" width="1200" height="900" loading="lazy"><div class="glare"></div></div>
+        <div class="art"><canvas data-art="mipg"></canvas><div class="glare"></div></div>
         <div class="info"><div><h3>Plataforma MIPG</h3><p>Tablero para alcaldías. El Semáforo Cliente Interno mide con una encuesta por QR cómo se atienden las dependencias y lo convierte en verde, amarillo o rojo, con resúmenes en lenguaje claro.</p>
           <div class="tags"><span>Next.js</span><span>Hojas de cálculo en vivo</span><span>Vercel</span></div>
           <div class="plinks"><a class="btn mag" href="https://plataforma-mipg.vercel.app" target="_blank" rel="noopener">Ver plataforma <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
         </div><span class="badge live">En uso</span></div>
       </div></div>
       <div class="proj rv" style="--i:1"><div class="card">
-        <div class="art"><img src="assets/preview-ventanilla.jpg" alt="Pantalla de radicación de la Ventanilla Única de PQRSD (datos de ejemplo)" width="1200" height="900" loading="lazy"><div class="glare"></div></div>
+        <div class="art"><canvas data-art="nodes"></canvas><div class="glare"></div></div>
         <div class="info"><div><h3>Ventanilla Única de PQRSD</h3><p>Proyecto de grado: radicación web y presencial con número legal en transacción atómica, consulta con doble factor, términos en días hábiles y un asistente de IA que sugiere la clasificación.</p>
           <div class="tags"><span>Next.js 16</span><span>TypeScript</span><span>Firebase</span><span>Gemini API</span><span>814 commits</span></div>
           <div class="plinks"><a class="btn mag" href="https://ventanilla-simacota.vercel.app" target="_blank" rel="noopener">Ver prototipo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="btn" href="https://github.com/robinsongalvis/ventanilla.simacota" target="_blank" rel="noopener">Código</a></div>
         </div><span class="badge dev">Proyecto de grado</span></div>
       </div></div>
       <div class="proj rv" style="--i:2"><div class="card">
-        <div class="art"><img src="assets/preview-proyecto-ia.jpg" alt="Tabla y gráfico de solicitudes ciudadanas por mes del Proyecto IA (datos de ejemplo)" width="1200" height="900" loading="lazy"><div class="glare"></div></div>
+        <div class="art"><canvas data-art="grid"></canvas><div class="glare"></div></div>
         <div class="info"><div><h3>Proyecto IA</h3><p>Plataforma de análisis e inteligencia de datos para la gestión y la toma de decisiones, construida a partir de información institucional del municipio.</p>
           <div class="tags"><span>Análisis de datos</span><span>IA</span><span>Vercel</span></div>
           <div class="plinks"><a class="btn mag" href="https://proyecto-ia-bay.vercel.app" target="_blank" rel="noopener">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
         </div><span class="badge dev">En desarrollo</span></div>
       </div></div>
       <div class="proj rv" style="--i:3"><div class="card">
-        <div class="art"><img src="assets/preview-memorial.jpg" alt="Tarjeta con código QR del Memorial Digital" width="1200" height="900" loading="lazy"><div class="glare"></div></div>
+        <div class="art"><canvas data-art="flow"></canvas><div class="glare"></div></div>
         <div class="info"><div><h3>Memorial Digital QR</h3><p>Perfiles conmemorativos con fotos, música y un código QR imprimible. Lo creé en memoria de mi papá. Incluye una auditoría de seguridad: XSS corregido, sesiones reforzadas y arranque sin secretos bloqueado.</p>
           <div class="tags"><span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>Cloudinary</span></div>
           <div class="plinks"><a class="btn" href="https://github.com/robinsongalvis/J-R-06-Legados" target="_blank" rel="noopener">Código <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
@@ -858,7 +887,7 @@ footer{padding:56px 0 28px;border-top:1px solid var(--line);background:var(--bg-
 <footer>
   <div class="wrap foot-grid">
     <div><a class="logo" href="#top"><i></i>Robinson Galvis</a><p>Software hecho con IA desde Santander, Colombia. Aplicativos reales, publicados en días.</p></div>
-    <div><b>Navegación</b><a href="#top">Inicio</a><a href="#sobre-mi">Sobre mí</a><a href="#mipg">Plataforma MIPG</a><a href="#proyectos">Portafolio</a><a href="#contacto">Contacto</a></div>
+    <div><b>Navegación</b><a href="#top">Inicio</a><a href="#sobre-mi">Sobre mí</a><a href="#mipg">Plataforma MIPG</a><a href="#laboratorio">Laboratorio</a><a href="#proyectos">Portafolio</a><a href="#contacto">Contacto</a></div>
     <div><b>Conectar</b><a href="https://github.com/robinsongalvis" target="_blank" rel="noopener">GitHub</a><a href="https://wa.me/573203574674" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:davidgalvis1519@gmail.com">Correo</a><a href="https://plataforma-mipg.vercel.app" target="_blank" rel="noopener">Plataforma MIPG</a></div>
   </div>
   <div class="wrap foot-bottom"><span>© 2026 Robinson David Galvis Quintero · Santander, Colombia</span><span>Hecho con código e IA</span></div>
@@ -983,6 +1012,80 @@ if(FINE&&!RM)$$('.proj').forEach(p=>{const c=p.querySelector('.card'),g=p.queryS
   p.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();const px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
     c.style.transform=`rotateY(${(px-.5)*9}deg) rotateX(${(.5-py)*9}deg) translateZ(0)`;g.style.setProperty('--gx',px*100+'%');g.style.setProperty('--gy',py*100+'%');});
   p.addEventListener('pointerleave',()=>c.style.transform='');});
+
+/* ---------- AI terminal ---------- */
+(function(){
+  const el=$('#term');
+  const script=[
+    ['p','# Regla Suprema'],
+    ['','La realidad del proyecto siempre tiene prioridad sobre el proceso.'],
+    ['dim','Saltarse una regla exige dejar constancia del porqué.'],
+    ['',''],
+    ['p','# Principios'],
+    ['ok','1. Arquitectura antes que implementación.'],
+    ['ok','2. Todo cambio se justifica. "Se ve mejor" no es justificación.'],
+    ['ok','3. Reutilización por defecto. Duplicar lógica está prohibido.'],
+    ['ok','5. Revisión cruzada: nadie valida su propio trabajo.'],
+    ['ok','9. IA como copiloto: la IA propone, el funcionario decide.'],
+    ['ok','12. Nada de respuestas complacientes.'],
+    ['ok','13. Medición antes que opinión.'],
+    ['',''],
+    ['hl','→ 12 roles · 48 ADR · 814 commits'],
+  ];
+  if(RM){el.innerHTML=script.map(([c,t])=>`<span class="${c}">${t}</span>`).join('\n');return;}
+  let started=false;
+  new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;run();}}).observe(el);
+  async function run(){
+    while(true){
+      el.innerHTML='';
+      for(const [cls,txt] of script){
+        const s=document.createElement('span');s.className=cls;el.append(s);const caret=document.createElement('span');caret.className='caret';el.append(caret);
+        const speed=cls==='p'?24:7;
+        for(let i=0;i<=txt.length;i++){s.textContent=txt.slice(0,i);await new Promise(r=>setTimeout(r,speed));}
+        caret.remove();el.append('\n');await new Promise(r=>setTimeout(r,cls==='p'?500:cls==='dim'?700:220));
+      }
+      const caret=document.createElement('span');caret.className='caret';el.append(caret);
+      await new Promise(r=>setTimeout(r,4500));
+    }
+  }
+})();
+
+/* ---------- particle shapes ---------- */
+(function(){
+  const c=$('#orb'),x=c.getContext('2d');const N=innerWidth<700?1200:2000;
+  let W,H,dpr=Math.min(devicePixelRatio,2);
+  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);}
+  size();addEventListener('resize',size);
+  const shapes={
+    sphere:i=>{const y=1-2*(i+.5)/N,r=Math.sqrt(1-y*y),t=i*2.39996;return[Math.cos(t)*r,y,Math.sin(t)*r];},
+    torus:i=>{const u=(i/N)*Math.PI*2*23,v=(i/N)*Math.PI*2;const R=.72,r=.3;return[(R+r*Math.cos(u))*Math.cos(v),r*Math.sin(u),(R+r*Math.cos(u))*Math.sin(v)];},
+    wave:i=>{const g=Math.sqrt(N)|0;const a=(i%g)/g*2-1,b=((i/g)|0)/g*2-1;return[a*1.1,Math.sin(a*4)*Math.cos(b*4)*.25,b*1.1];},
+    helix:i=>{const t=i/N;const s=i%2?Math.PI:0;const a=t*Math.PI*10+s;return[Math.cos(a)*.55,t*2-1,Math.sin(a)*.55];},
+  };
+  const pts=Array.from({length:N},(_,i)=>{const p=shapes.sphere(i);return{p:[...p],t:p};});
+  $$('.chips .chip').forEach(b=>b.addEventListener('click',()=>{$$('.chips .chip').forEach(o=>o.setAttribute('aria-pressed',o===b));const f=shapes[b.dataset.shape];pts.forEach((q,i)=>q.t=f(i));}));
+  let ry=0,rx=-.35,vy=.004,drag=false,lx=0,ly=0,vis=false;
+  c.addEventListener('pointerdown',e=>{drag=true;lx=e.clientX;ly=e.clientY;c.setPointerCapture(e.pointerId);c.style.cursor='grabbing';});
+  c.addEventListener('pointermove',e=>{if(!drag)return;vy=(e.clientX-lx)*.004;rx+=(e.clientY-ly)*.004;rx=Math.max(-1.3,Math.min(1.3,rx));lx=e.clientX;ly=e.clientY;});
+  c.addEventListener('pointerup',()=>{drag=false;c.style.cursor='';});
+  new IntersectionObserver(([e])=>vis=e.isIntersecting).observe(c);
+  const t0=performance.now();
+  function f(now){
+    if(vis||RM){
+      ry+=vy;if(!drag)vy=lerp(vy,.004,.02);
+      x.clearRect(0,0,W,H);const s=Math.min(W,H)*.42,cx=W/2,cy=H/2;
+      const cY=Math.cos(ry),sY=Math.sin(ry),cX=Math.cos(rx),sX=Math.sin(rx),tt=(now-t0)/1000;
+      for(const q of pts){for(let k=0;k<3;k++)q.p[k]=lerp(q.p[k],q.t[k],.06);
+        let [a,b,d]=q.p;const w=1+Math.sin(tt*1.5+b*4)*.03;a*=w;d*=w;
+        const X=a*cY-d*sY,Z1=a*sY+d*cY,Y=b*cX-Z1*sX,Z=b*sX+Z1*cX;
+        const pz=2.6/(2.6+Z),px=cx+X*s*pz,py=cy+Y*s*pz;const depth=(1-Z)/2;
+        const hue=lerp(168,250,(b+1)/2)+depth*30;
+        x.fillStyle=`hsla(${hue},90%,${55+depth*20}%,${.25+depth*.75})`;
+        const r=(.6+depth*1.6)*pz;x.fillRect(px-r/2,py-r/2,r,r);}
+    }
+    if(!RM)requestAnimationFrame(f);}
+  requestAnimationFrame(f);
+})();
 
 /* ---------- project art canvases ---------- */
 $$('canvas[data-art]').forEach(c=>{
