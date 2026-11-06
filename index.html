@@ -399,10 +399,19 @@ section{padding-block:clamp(80px,12vw,150px)}
 
 /* contact */
 .contact{text-align:left;position:relative;overflow:hidden}
-.contact h2{font-size:clamp(48px,11vw,160px);line-height:.9;font-weight:800;letter-spacing:-.05em}
+.contact h2{font-size:clamp(48px,8.5vw,120px);line-height:.9;font-weight:800;letter-spacing:-.05em}
 .contact-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:44px}
 .mail{font-family:var(--mono);font-size:clamp(14px,2vw,18px);padding:16px 20px;border:1px solid var(--line);border-radius:14px;background:var(--bg-2);user-select:all;word-break:break-all;min-width:0}
 .socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.contact-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:end}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+.ficha{border:1px solid var(--line);border-radius:24px;padding:28px;background:var(--bg-2)}
+.ficha ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:14px}
+.ficha li{display:grid;gap:4px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.ficha li:last-child{border-bottom:0;padding-bottom:0}
+.ficha li b{font-weight:600;font-size:16px;line-height:1.3;color:var(--fg)}
+.ficha li span,.ficha p{color:var(--muted);font-size:14px;line-height:1.5}
+.ficha p{margin-top:8px}
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,220%);opacity:0;background:var(--fg);color:var(--bg);padding:12px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .45s cubic-bezier(.2,.8,.2,1);z-index:80}
@@ -464,7 +473,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div>
     </div>
     <div class="hero-foot">
-      <p>Soy <strong>Robinson Galvis</strong>, desarrollador. Con <strong>Claude Code y Codex</strong> como copilotos convierto una idea en un aplicativo funcionando, probado y publicado <strong>en días, no meses</strong>. La prueba: la <strong>Plataforma MIPG</strong>, que diseñé, construí y publiqué yo, y que ya midió la gestión de una alcaldía con más de 200 funcionarios.</p>
+      <p>Soy <strong>Robinson Galvis</strong>, desarrollador. <strong>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</strong> (SENA) y culminando <strong>Ingeniería de Software</strong> en el Politécnico Grancolombiano. Con <strong>Claude Code y Codex</strong> como copilotos convierto una idea en un aplicativo funcionando, probado y publicado <strong>en días, no meses</strong>. La prueba: la <strong>Plataforma MIPG</strong>, que diseñé, construí y publiqué yo, y que ya midió la gestión de una alcaldía con más de 200 funcionarios.</p>
       <div class="cta">
         <a class="btn primary mag" href="#mipg">Ver Plataforma MIPG <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn mag" href="#contacto">Contratarme</a>
@@ -586,16 +595,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <p class="rv" style="color:var(--muted);margin-top:22px;max-width:52ch">Esta página es en sí misma una demostración: el fondo, las transiciones y el efecto de la foto están escritos en código. Además de programar, creo contenido en video para redes, así que sé construir un producto y también comunicarlo.</p>
     </div>
     <div class="tl rv">
-      <div class="tl-i"><span class="tl-d">En curso · grado 2027</span><div><h3>Ingeniería de Software</h3><p>Politécnico Grancolombiano. Último año; proyecto de grado: ventanilla única de PQRSD.</p></div></div>
+      <div class="tl-i"><span class="tl-d">Culminando · grado 2027</span><div><h3>Ingeniería de Software</h3><p>Politécnico Grancolombiano. Último año; proyecto de grado: ventanilla única de PQRSD.</p></div></div>
       <div class="tl-i"><span class="tl-d">Actual · 2 años</span><div><h3>Comunicaciones en el sector público</h3><p>Contenido y redes sociales de una entidad pública. Ahí vi el problema y construí la Plataforma MIPG por cuenta propia.</p></div></div>
-      <div class="tl-i"><span class="tl-d">SENA</span><div><h3>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</h3><p>También técnico en mantenimiento de equipos y redes de datos.</p></div></div>
+      <div class="tl-i"><span class="tl-d">SENA · título obtenido</span><div><h3>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</h3><p>También técnico en mantenimiento de equipos de cómputo y curso de fundamentos de redes de datos.</p></div></div>
       <div class="tl-i"><span class="tl-d">3 años</span><div><h3>IDATEL · Técnico en sistemas</h3><p>Redes y mantenimiento preventivo y correctivo de equipos.</p></div></div>
     </div>
   </div>
 </section>
 
 <section id="contacto" class="contact">
-  <div class="wrap">
+  <div class="wrap contact-grid">
+    <div>
     <div class="eyebrow rv">Contacto</div>
     <h2 class="rv" style="margin-top:18px">¿Construimos<br><span class="grad">algo juntos?</span></h2>
     <div class="contact-row rv">
@@ -606,6 +616,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <a class="btn primary" href="https://wa.me/573203574674?text=Hola%20Robinson%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo" target="_blank" rel="noopener">WhatsApp · 320 357 4674</a>
       <a class="btn" href="https://github.com/robinsongalvis" target="_blank" rel="noopener">GitHub · robinsongalvis</a>
     </div>
+    </div>
+    <aside class="ficha rv" aria-label="Formación y disponibilidad">
+      <span class="eyebrow">Formación</span>
+      <ul>
+        <li><b>Ingeniería de Software</b><span>Politécnico Grancolombiano · culminando · grado 2027</span></li>
+        <li><b>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</b><span>SENA · título obtenido</span></li>
+        <li><b>Técnico en mantenimiento de equipos de cómputo</b><span>SENA</span></li>
+      </ul>
+      <span class="eyebrow" style="display:block;margin-top:22px">Disponibilidad</span>
+      <p>Trabajo remoto · Santander, Colombia · respondo por correo o WhatsApp</p>
+    </aside>
   </div>
 </section>
 
