@@ -378,7 +378,7 @@ section{padding-block:clamp(80px,12vw,150px)}
 
 /* avatar matrix */
 .hero-top{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end}
-@media (max-width:900px){.hero-top{grid-template-columns:1fr}.hero-top .avatar{justify-self:center;width:min(100%,320px);margin-top:16px}}
+@media (max-width:900px){.hero-top{grid-template-columns:1fr}.hero-top .avatar{justify-self:center;width:min(100%,240px);margin-top:16px}}
 .avatar{position:relative;width:clamp(160px,22vw,300px);aspect-ratio:1;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#05060a;cursor:pointer;isolation:isolate;box-shadow:0 30px 60px -20px rgba(0,0,0,.8);-webkit-tap-highlight-color:transparent;user-select:none}
 .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0}
 .avatar canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
@@ -434,7 +434,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <a href="#mipg">Plataforma MIPG</a>
       <a href="#metodo">Cómo trabajo con IA</a>
       <a href="#proyectos">Proyectos</a>
-      <a href="#laboratorio">Laboratorio</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -500,7 +499,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <li><i style="--c:#f5c75b"></i><div><b>Resúmenes en lenguaje claro</b><span>Las cifras se explican en frases que cualquier jefe de oficina entiende en segundos.</span></div></li>
         <li><i style="--c:var(--violet)"></i><div><b>Varios municipios y roles</b><span>Selector de alcaldía y de perfil, con módulos de Tablero, Ciudadanías y PQRSDF.</span></div></li>
       </ul>
-      <p class="rv" style="margin-top:22px;color:var(--muted);font-size:14px">Probado con una encuesta real: 202 funcionarios, 706 evaluaciones y 24 dependencias de una alcaldía de Santander.</p>
+      <p class="rv" style="margin-top:22px;color:var(--muted);font-size:14px">Probado con una encuesta real: 202 funcionarios, 706 evaluaciones y 24 dependencias de una alcaldía de Santander. El Semáforo es el primer módulo: la plataforma está pensada para cubrir las siete dimensiones del MIPG.</p>
     </div>
     <div class="rv">
       <div class="phone-wrap"><div class="phone" id="phone">
@@ -523,23 +522,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     </div>
   </div>
 
-  <div class="wrap" style="margin-top:clamp(56px,8vw,96px)">
-    <div class="head">
-      <h2 class="rv" style="font-size:clamp(30px,4.6vw,56px)">Hasta dónde puede llegar</h2>
-      <p class="rv">El semáforo es el primer módulo. La plataforma está pensada para cubrir las siete dimensiones del MIPG y convertirse en el tablero de gestión de cualquier alcaldía. Esta es la ruta que propongo.</p>
-    </div>
-    <div class="road">
-      <div class="road-i on rv"><span class="road-t">Hoy · en uso</span><h3>Semáforo Cliente Interno</h3><p>Encuesta por QR, resultados en vivo, promedio por dependencia y por aspecto, resúmenes en lenguaje claro, selector de municipio y de rol.</p></div>
-      <div class="road-i rv"><span class="road-t">Siguiente</span><h3>Planes de acción y evidencias</h3><p>Cada dependencia en rojo recibe un plan con responsable, fecha y evidencias adjuntas. Seguimiento automático del avance.</p></div>
-      <div class="road-i rv"><span class="road-t">Luego</span><h3>Autodiagnóstico por dimensión</h3><p>Las 7 dimensiones y las políticas del MIPG en un solo formulario guiado, con puntaje y brechas frente al reporte FURAG.</p></div>
-      <div class="road-i rv"><span class="road-t">Después</span><h3>Control interno y entes de control</h3><p>Reportes listos para auditoría, alertas de vencimiento y trazabilidad de quién hizo qué y cuándo.</p></div>
-      <div class="road-i rv"><span class="road-t">Visión</span><h3>Muchas alcaldías, una plataforma</h3><p>Cada municipio con sus datos aislados y comparables entre sí. Un costo que un municipio pequeño sí puede pagar.</p></div>
-    </div>
-    <div class="dims rv">
-      <span class="eyebrow" style="grid-column:1/-1">Las 7 dimensiones del MIPG que cubre la ruta</span>
-      <i>Talento humano</i><i>Direccionamiento estratégico</i><i>Gestión con valores para resultados</i><i>Evaluación de resultados</i><i>Información y comunicación</i><i>Gestión del conocimiento</i><i>Control interno</i>
-    </div>
-  </div>
 </section>
 
 <section id="metodo" style="background:var(--bg-2);border-block:1px solid var(--line)">
@@ -559,10 +541,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="stackrow rv">
       <span class="eyebrow">Mi stack de IA</span>
       <div class="dims" style="margin-top:10px"><i>Claude Code</i><i>Codex</i><i>Subagentes</i><i>Skills</i><i>MCP</i><i>Gemini API</i><i>GitHub Actions</i><i>Vercel</i><i>Firebase</i><i>Sentry</i><i>Playwright</i><i>Vitest</i></div>
-    </div>
-    <div class="quotes">
-      <div class="q rv">"Se ve mejor" no es justificación. Todo cambio responde qué problema resuelve, qué riesgo elimina o qué deuda reduce.<small>PRINCIPIO 2 · MIS REGLAS PARA LOS AGENTES</small></div>
-      <div class="q rv">Criterio de ingeniero senior: cuestionar las solicitudes que empeoren la arquitectura y proponer la alternativa superior. Nada de respuestas complacientes.<small>PRINCIPIO 12 · MIS REGLAS PARA LOS AGENTES</small></div>
     </div>
   </div>
 </section>
@@ -598,76 +576,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
-<section id="laboratorio" style="background:var(--bg-2);border-block:1px solid var(--line)">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="rv">Laboratorio en vivo</h2>
-      <p class="rv">Nada de capturas: esto corre aquí mismo. A la izquierda, un extracto literal de las reglas que les doy a Claude Code y Codex en mi repositorio. A la derecha, un objeto 3D hecho en código que puedes girar con el dedo o el mouse.</p>
-    </div>
-    <div class="lab">
-      <div class="term rv">
-        <div class="term-bar"><i></i><i></i><i></i><span>AGENTS.md — reglas reales del repositorio</span></div>
-        <div class="term-body" id="term" aria-live="off"></div>
-      </div>
-      <div class="playground rv">
-        <div>
-          <h3>Esfera de partículas</h3>
-          <p>2.000 puntos proyectados en 3D, sin librerías. Arrastra para girarla.</p>
-        </div>
-        <canvas id="orb" aria-label="Esfera 3D interactiva"></canvas>
-        <div class="chips" role="group" aria-label="Forma">
-          <button class="chip" aria-pressed="true" data-shape="sphere">Esfera</button>
-          <button class="chip" aria-pressed="false" data-shape="torus">Toroide</button>
-          <button class="chip" aria-pressed="false" data-shape="wave">Onda</button>
-          <button class="chip" aria-pressed="false" data-shape="helix">Hélice</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="servicios">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="rv">Lo que hago</h2>
-      <p class="rv">Desarrollo es el centro. La IA me deja entregar más rápido sin perder calidad.</p>
-    </div>
-    <div class="services compact">
-      <article class="svc rv" style="--c:var(--teal)">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13.5 5l-3 14"/></svg></div>
-        <h3>Aplicativos web a medida</h3>
-        <p>Usuarios, roles, formularios, bases de datos y reportes. Herramientas reales para procesos reales.</p>
-      </article>
-      <article class="svc rv" style="--c:var(--coral)">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div>
-        <h3>Desarrollo asistido por IA</h3>
-        <p>Claude Code y Codex generan, prueban y revisan. Yo diseño, decido y verifico cada cambio.</p>
-      </article>
-      <article class="svc rv" style="--c:var(--violet)">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a4 4 0 014 4v5.5M15.5 18H10a4 4 0 01-4-4V8.5"/></svg></div>
-        <h3>Automatización y datos</h3>
-        <p>Reportes que se generan solos, hojas de cálculo migradas a bases de datos, integraciones.</p>
-      </article>
-      <article class="svc rv" style="--c:#f5c75b">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="14" height="14" rx="3"/><path d="M17 10l4-2.5v9L17 14"/></svg></div>
-        <h3>Contenido para redes</h3>
-        <p>Guion, edición y piezas cortas que comunican con claridad lo que construyo.</p>
-      </article>
-    </div>
-  </div>
-</section>
 
-<section id="sobre-mi" style="padding-top:0">
+<section id="sobre-mi" style="background:var(--bg-2);border-block:1px solid var(--line)">
   <div class="wrap about">
     <div>
       <div class="eyebrow rv">Sobre mí</div>
       <p class="big" id="words" style="margin-top:20px">Vengo del soporte técnico y hoy construyo software. Escribo código con Claude y Codex a mi lado: <em>yo pongo el criterio y la arquitectura</em>, la IA me ayuda a llegar más lejos y más rápido.</p>
-      <p class="rv" style="color:var(--muted);margin-top:22px;max-width:52ch">Esta página es en sí misma una demostración: el fondo, las transiciones y la <a href="#laboratorio" style="color:var(--teal)">esfera 3D del Laboratorio</a> están escritos en código. Además de programar, creo contenido en video para redes, así que sé construir un producto y también comunicarlo.</p>
-      <div class="stats rv">
-        <div><b data-count="4">0</b><small>aplicativos publicados</small></div>
-        <div><b data-count="326">0</b><small>archivos de pruebas</small></div>
-        <div><b data-count="2027">0</b><small>año de grado</small></div>
-      </div>
+      <p class="rv" style="color:var(--muted);margin-top:22px;max-width:52ch">Esta página es en sí misma una demostración: el fondo, las transiciones y el efecto de la foto están escritos en código. Además de programar, creo contenido en video para redes, así que sé construir un producto y también comunicarlo.</p>
     </div>
     <div class="tl rv">
       <div class="tl-i"><span class="tl-d">En curso · grado 2027</span><div><h3>Ingeniería de Software</h3><p>Politécnico Grancolombiano. Último año; proyecto de grado: ventanilla única de PQRSD.</p></div></div>
@@ -815,80 +731,6 @@ if(FINE&&!RM)$$('.proj').forEach(p=>{const c=p.querySelector('.card'),g=p.queryS
     c.style.transform=`rotateY(${(px-.5)*9}deg) rotateX(${(.5-py)*9}deg) translateZ(0)`;g.style.setProperty('--gx',px*100+'%');g.style.setProperty('--gy',py*100+'%');});
   p.addEventListener('pointerleave',()=>c.style.transform='');});
 
-/* ---------- AI terminal ---------- */
-(function(){
-  const el=$('#term');
-  const script=[
-    ['p','# Regla Suprema'],
-    ['','La realidad del proyecto siempre tiene prioridad sobre el proceso.'],
-    ['dim','Saltarse una regla exige dejar constancia del porqué.'],
-    ['',''],
-    ['p','# Principios'],
-    ['ok','1. Arquitectura antes que implementación.'],
-    ['ok','2. Todo cambio se justifica. "Se ve mejor" no es justificación.'],
-    ['ok','3. Reutilización por defecto. Duplicar lógica está prohibido.'],
-    ['ok','5. Revisión cruzada: nadie valida su propio trabajo.'],
-    ['ok','9. IA como copiloto: la IA propone, el funcionario decide.'],
-    ['ok','12. Nada de respuestas complacientes.'],
-    ['ok','13. Medición antes que opinión.'],
-    ['',''],
-    ['hl','→ 12 roles · 48 ADR · 814 commits'],
-  ];
-  if(RM){el.innerHTML=script.map(([c,t])=>`<span class="${c}">${t}</span>`).join('\n');return;}
-  let started=false;
-  new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;run();}}).observe(el);
-  async function run(){
-    while(true){
-      el.innerHTML='';
-      for(const [cls,txt] of script){
-        const s=document.createElement('span');s.className=cls;el.append(s);const caret=document.createElement('span');caret.className='caret';el.append(caret);
-        const speed=cls==='p'?24:7;
-        for(let i=0;i<=txt.length;i++){s.textContent=txt.slice(0,i);await new Promise(r=>setTimeout(r,speed));}
-        caret.remove();el.append('\n');await new Promise(r=>setTimeout(r,cls==='p'?500:cls==='dim'?700:220));
-      }
-      const caret=document.createElement('span');caret.className='caret';el.append(caret);
-      await new Promise(r=>setTimeout(r,4500));
-    }
-  }
-})();
-
-/* ---------- particle shapes ---------- */
-(function(){
-  const c=$('#orb'),x=c.getContext('2d');const N=innerWidth<700?1200:2000;
-  let W,H,dpr=Math.min(devicePixelRatio,2);
-  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);}
-  size();addEventListener('resize',size);
-  const shapes={
-    sphere:i=>{const y=1-2*(i+.5)/N,r=Math.sqrt(1-y*y),t=i*2.39996;return[Math.cos(t)*r,y,Math.sin(t)*r];},
-    torus:i=>{const u=(i/N)*Math.PI*2*23,v=(i/N)*Math.PI*2;const R=.72,r=.3;return[(R+r*Math.cos(u))*Math.cos(v),r*Math.sin(u),(R+r*Math.cos(u))*Math.sin(v)];},
-    wave:i=>{const g=Math.sqrt(N)|0;const a=(i%g)/g*2-1,b=((i/g)|0)/g*2-1;return[a*1.1,Math.sin(a*4)*Math.cos(b*4)*.25,b*1.1];},
-    helix:i=>{const t=i/N;const s=i%2?Math.PI:0;const a=t*Math.PI*10+s;return[Math.cos(a)*.55,t*2-1,Math.sin(a)*.55];},
-  };
-  const pts=Array.from({length:N},(_,i)=>{const p=shapes.sphere(i);return{p:[...p],t:p};});
-  $$('.chip').forEach(b=>b.addEventListener('click',()=>{$$('.chip').forEach(o=>o.setAttribute('aria-pressed',o===b));const f=shapes[b.dataset.shape];pts.forEach((q,i)=>q.t=f(i));}));
-  let ry=0,rx=-.35,vy=.004,drag=false,lx=0,ly=0,vis=false;
-  c.addEventListener('pointerdown',e=>{drag=true;lx=e.clientX;ly=e.clientY;c.setPointerCapture(e.pointerId);c.style.cursor='grabbing';});
-  c.addEventListener('pointermove',e=>{if(!drag)return;vy=(e.clientX-lx)*.004;rx+=(e.clientY-ly)*.004;rx=Math.max(-1.3,Math.min(1.3,rx));lx=e.clientX;ly=e.clientY;});
-  c.addEventListener('pointerup',()=>{drag=false;c.style.cursor='';});
-  new IntersectionObserver(([e])=>vis=e.isIntersecting).observe(c);
-  const t0=performance.now();
-  function f(now){
-    if(vis||RM){
-      ry+=vy;if(!drag)vy=lerp(vy,.004,.02);
-      x.clearRect(0,0,W,H);const s=Math.min(W,H)*.42,cx=W/2,cy=H/2;
-      const cY=Math.cos(ry),sY=Math.sin(ry),cX=Math.cos(rx),sX=Math.sin(rx),tt=(now-t0)/1000;
-      for(const q of pts){for(let k=0;k<3;k++)q.p[k]=lerp(q.p[k],q.t[k],.06);
-        let [a,b,d]=q.p;const w=1+Math.sin(tt*1.5+b*4)*.03;a*=w;d*=w;
-        const X=a*cY-d*sY,Z1=a*sY+d*cY,Y=b*cX-Z1*sX,Z=b*sX+Z1*cX;
-        const pz=2.6/(2.6+Z),px=cx+X*s*pz,py=cy+Y*s*pz;const depth=(1-Z)/2;
-        const hue=lerp(168,250,(b+1)/2)+depth*30;
-        x.fillStyle=`hsla(${hue},90%,${55+depth*20}%,${.25+depth*.75})`;
-        const r=(.6+depth*1.6)*pz;x.fillRect(px-r/2,py-r/2,r,r);}
-    }
-    if(!RM)requestAnimationFrame(f);}
-  requestAnimationFrame(f);
-})();
-
 /* ---------- project art canvases ---------- */
 $$('canvas[data-art]').forEach(c=>{
   const x=c.getContext('2d'),type=c.dataset.art,dpr=Math.min(devicePixelRatio,2);let W,H,vis=false;
@@ -967,9 +809,12 @@ $$('canvas[data-art]').forEach(c=>{
     if(img.complete&&img.naturalWidth){const r=Math.max(W/img.naturalWidth,H/img.naturalHeight),w=img.naturalWidth*r,h=img.naturalHeight*r;o.drawImage(img,(W-w)/2,(H-h)/2,w,h);ready=true;}}
   img.addEventListener('load',size);size();addEventListener('resize',size);
   const setOn=v=>{on=v;target=v?1:0;box.classList.toggle('revealed',v);};
-  if(FINE){box.addEventListener('pointerenter',()=>setOn(true));box.addEventListener('pointerleave',()=>setOn(false));}
-  box.addEventListener('click',()=>setOn(!on));
-  if(!FINE&&!RM)setTimeout(()=>{if(!on)setOn(true);},1800);
+  // vuelve a "decodificar" la foto desde casi cero (escritorio: mouse encima o clic)
+  const replay=()=>{for(let i=0;i<cols;i++)prog[i]=Math.random()*.2;setOn(true);};
+  if(FINE)box.addEventListener('pointerenter',replay);
+  box.addEventListener('click',()=>FINE?replay():setOn(!on));
+  // en todos los dispositivos la foto se revela sola tras la lluvia inicial
+  if(!RM)setTimeout(()=>{if(!on)setOn(true);},1600);
   let last=0;
   function f(now){
     if(now-last>33||RM){last=now;
